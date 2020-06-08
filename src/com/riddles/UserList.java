@@ -32,7 +32,7 @@ public class UserList{
            System.out.println(user.getFornavn() + " " + user.getEfternavn());
        }
 
-       return userArr;
+       return tmpUser;
     }
 
 
