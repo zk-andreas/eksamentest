@@ -1,4 +1,4 @@
-package com.riddles;
+package com.riddles.Model;
 
 import java.util.Objects;
 
@@ -72,12 +72,14 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        if(fornavn.equals(o.fornavn) || efternavn.equals(o.efternavn)){
-            return 0;
-        }else if(fornavn.length() > o.fornavn.length() || efternavn.length() > o.efternavn.length()){
-            return  1;
-        }else{
-            return -1;
+        int firstCompare = getFornavn().compareTo(o.getFornavn());
+        if (firstCompare != 0) {
+            return firstCompare;
         }
+        int lastCompare = getEfternavn().compareTo(o.getEfternavn());
+        if (lastCompare != 0) {
+            return lastCompare;
+        }
+        return getEmail().compareTo(o.getEmail());
     }
 }

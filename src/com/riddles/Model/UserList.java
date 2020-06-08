@@ -1,4 +1,6 @@
-package com.riddles;
+package com.riddles.Model;
+
+import com.riddles.Model.User;
 
 import java.util.ArrayList;
 import java.util.Collections;
